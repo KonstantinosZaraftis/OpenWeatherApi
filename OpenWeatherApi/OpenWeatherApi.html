@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.6.0.js"></script>
+</head>
+
+
+
+
+<body>
+
+
+
+    <button>Call Weather Api</button>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click( function () {
+                $.ajax({
+                    url:"http://api.openweathermap.org/data/2.5/weather?q=Kos&appid=4f6cd0ce8dc65f8a450086afa7288b16",
+                    type:"GET",
+                    dataType:"JSON",
+                        success: function(response) {
+                        console.log(response);
+                        }
+
+                });
+
+            });
+
+     });
+
+    </script>
+
+
+</body>
+</html>
